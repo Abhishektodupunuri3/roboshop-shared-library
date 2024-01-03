@@ -1,8 +1,6 @@
 def lintchecks(){
     sh'''
             echo Installing PYLint for ${COMPONENT}
-            #pip3 install pylint
-            #pylint *.py
             echo lint checks completed for ${COMPONENT}
     '''
 }
@@ -21,7 +19,7 @@ def call(COMPONENT){
         }     
         stage('code compile') {
             steps {
-              //  sh "mvn clean compile"
+ //               sh "mvn clean compile"
             }
         }                                         // end of stages
      }
