@@ -21,7 +21,7 @@ def call(COMPONENT){
         }     
         stage('code compile') {
             steps {
-              //  sh "mvn clean compile"
+                    //  sh "mvn clean compile"
             }
         }                                         // end of stages
      }
