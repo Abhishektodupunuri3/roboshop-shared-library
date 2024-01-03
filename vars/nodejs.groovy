@@ -1,12 +1,13 @@
 def lintchecks(){
     sh'''
-           echo Installing JSlint
+           echo Installing JSlint for ${COMPONENT}
            npm i jslint
            node_modules/jslint/bin/jslint.js server.js || true
+           echo lint checks completed for ${COMPONENT}
     '''
 }
 
-def call(){
+def call(COMPONENT){
     pipeline {
                agent any 
      stages {
